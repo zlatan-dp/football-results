@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/football-results/static/css/main.7acaea2f.css",
+    "main.js": "/football-results/static/js/main.0562341e.js",
+    "index.html": "/football-results/index.html",
+    "main.7acaea2f.css.map": "/football-results/static/css/main.7acaea2f.css.map",
+    "main.0562341e.js.map": "/football-results/static/js/main.0562341e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.0562341e.js"
+  ]
+}
