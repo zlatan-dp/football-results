@@ -2,20 +2,21 @@ import { useState } from 'react';
 import { GoalBtn, ResultWrap, SaveBtn, ScoreWrap } from './ResultItem.styled';
 import { Container } from 'components/global/Container';
 
-export const ResultItem = () => {
+export const ResultItemBavPens = ({ updateBavovnaPensy }) => {
   const [bavovnaScore, setBavovnaScore] = useState(0);
-  const [kabansScore, setKabansScore] = useState(0);
+  const [pensyScore, setPensyScore] = useState(0);
   const [isSaved, setIsSaved] = useState(false);
 
   const bavovnaIncrement = () => {
     setBavovnaScore(prevState => prevState + 1);
   };
-  const kabansIncrement = () => {
-    setKabansScore(prevState => prevState + 1);
+  const pensyIncrement = () => {
+    setPensyScore(prevState => prevState + 1);
   };
 
   const saveResult = () => {
     setIsSaved(true);
+    updateBavovnaPensy(bavovnaScore, pensyScore);
   };
 
   return (
@@ -30,14 +31,14 @@ export const ResultItem = () => {
         <ScoreWrap>
           <span>{bavovnaScore}</span>
           <span>-</span>
-          <span>{kabansScore}</span>
+          <span>{pensyScore}</span>
         </ScoreWrap>
         {!isSaved && (
-          <GoalBtn type="button" onClick={kabansIncrement}>
+          <GoalBtn type="button" onClick={pensyIncrement}>
             +
           </GoalBtn>
         )}
-        <p>Кабани</p>
+        <p>Пенси</p>
         <SaveBtn disabled={isSaved} type="button" onClick={saveResult}>
           Записати
         </SaveBtn>
