@@ -2,12 +2,8 @@ import { useState } from 'react';
 import { bavovnaKabans } from 'helpers/BavovnaKabans';
 import { bavovnaPensy } from 'helpers/BavovnaPensy';
 import { kabansPensy } from 'helpers/KabansPensy';
-
-import { ResultItemBavKab } from './ResultItem/ResultItemBavKab';
-import { ResultItemBavPens } from './ResultItem/ResultItemBavPens';
-import { ResultItemKabPens } from './ResultItem/ResultItemKabPens';
-
 import { TotalTable } from './TotalTable/TotalTable';
+import { ResultList } from './ResultList/ResultList';
 
 export const App = () => {
   const [bavovnaStats, setBavovnaStats] = useState({
@@ -53,9 +49,12 @@ export const App = () => {
         kabans={kabansStats}
         pensy={pensyStats}
       />
-      <ResultItemBavKab updateBavovnaKabans={updateBavovnaKabans} />
-      <ResultItemBavPens updateBavovnaPensy={updateBavovnaPensy} />
-      <ResultItemKabPens updateKabansPensy={updateKabansPensy} />
+
+      <ResultList
+        updateBavovnaKabans={updateBavovnaKabans}
+        updateBavovnaPensy={updateBavovnaPensy}
+        updateKabansPensy={updateKabansPensy}
+      />
     </>
   );
 };

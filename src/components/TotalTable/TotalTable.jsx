@@ -1,5 +1,13 @@
-import { Container } from 'components/global/Container';
-import { TableWrap } from './TotalTable.styled';
+import { Container } from 'components/global/container/Container';
+import {
+  TableWrap,
+  Title,
+  Table,
+  TableHead,
+  TH,
+  TR,
+  TD,
+} from './TotalTable.styled';
 
 export const TotalTable = ({ bavovna, kabans, pensy }) => {
   const bavovnaGoalDif = bavovna.goalsFor - bavovna.goalsAgainst;
@@ -14,54 +22,54 @@ export const TotalTable = ({ bavovna, kabans, pensy }) => {
   return (
     <Container>
       <TableWrap>
-        <table>
-          <caption>Vsrata Lite League</caption>
-          <thead>
-            <tr>
-              <th>Команди</th>
-              <th>Перемоги</th>
-              <th>Нічиї</th>
-              <th>Поразки</th>
-              <th>Забито</th>
-              <th>Пропущено</th>
-              <th>Різниця</th>
-              <th>Очки</th>
-            </tr>
-          </thead>
+        <Table>
+          <Title>Vsrata Lite League</Title>
+          <TableHead>
+            <TR>
+              <TH>Команди</TH>
+              <TH>Перем</TH>
+              <TH>Нічиї</TH>
+              <TH>Пораз</TH>
+              <TH>Забито</TH>
+              <TH>Пропущ</TH>
+              <TH>Різн</TH>
+              <TH>Очки</TH>
+            </TR>
+          </TableHead>
 
           <tbody>
-            <tr>
-              <td>Бавовна</td>
-              <td>{bavovna.wins}</td>
-              <td>{bavovna.draws}</td>
-              <td>{bavovna.losses}</td>
-              <td>{bavovna.goalsFor}</td>
-              <td>{bavovna.goalsAgainst}</td>
-              <td>{bavovnaGoalDif}</td>
-              <td>{bavovnaPoints}</td>
-            </tr>
-            <tr>
-              <td>Кабани</td>
-              <td>{kabans.wins}</td>
-              <td>{kabans.draws}</td>
-              <td>{kabans.losses}</td>
-              <td>{kabans.goalsFor}</td>
-              <td>{kabans.goalsAgainst}</td>
-              <td>{kabansGoalDif}</td>
-              <td>{kabansPoints}</td>
-            </tr>
-            <tr>
-              <td>Пенси</td>
-              <td>{pensy.wins}</td>
-              <td>{pensy.draws}</td>
-              <td>{pensy.losses}</td>
-              <td>{pensy.goalsFor}</td>
-              <td>{pensy.goalsAgainst}</td>
-              <td>{pensyGoalDif}</td>
-              <td>{pensyPoints}</td>
-            </tr>
+            <TR>
+              <TD>Бавовна</TD>
+              <TD>{bavovna.wins}</TD>
+              <TD>{bavovna.draws}</TD>
+              <TD>{bavovna.losses}</TD>
+              <TD>{bavovna.goalsFor}</TD>
+              <TD>{bavovna.goalsAgainst}</TD>
+              <TD>{bavovnaGoalDif}</TD>
+              <TD>{bavovnaPoints}</TD>
+            </TR>
+            <TR>
+              <TD>Кабани</TD>
+              <TD>{kabans.wins}</TD>
+              <TD>{kabans.draws}</TD>
+              <TD>{kabans.losses}</TD>
+              <TD>{kabans.goalsFor}</TD>
+              <TD>{kabans.goalsAgainst}</TD>
+              <TD>{kabansGoalDif}</TD>
+              <TD>{kabansPoints}</TD>
+            </TR>
+            <TR>
+              <TD>Пенси</TD>
+              <TD>{pensy.wins}</TD>
+              <TD>{pensy.draws}</TD>
+              <TD>{pensy.losses}</TD>
+              <TD>{pensy.goalsFor}</TD>
+              <TD>{pensy.goalsAgainst}</TD>
+              <TD>{pensyGoalDif}</TD>
+              <TD>{pensyPoints}</TD>
+            </TR>
           </tbody>
-        </table>
+        </Table>
       </TableWrap>
     </Container>
   );
