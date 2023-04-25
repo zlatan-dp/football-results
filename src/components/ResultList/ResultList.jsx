@@ -1,6 +1,10 @@
 import { ResultItem } from '../ResultItem/ResultItem';
 import { Container } from 'components/global/container/Container';
 
+const BavovnaTeam = ['МкРей', 'Дімас', 'Рафа', 'Білий', 'Рамон'];
+const KabansTeam = ['Стас', 'Сас', 'Вєталь', 'Євген', 'Дімон'];
+const PensyTeam = ['Жека', 'Тьосса', 'СД', 'Філ', 'Слава'];
+
 export const ResultList = ({
   updateBavovnaKabans,
   updateBavovnaPensy,
@@ -13,76 +17,22 @@ export const ResultList = ({
           updateFunction={updateBavovnaKabans}
           teamOne={'Бавовна'}
           teamTwo={'Кабани'}
+          teamOneSquad={BavovnaTeam}
+          teamTwoSquad={KabansTeam}
         />
         <ResultItem
           updateFunction={updateBavovnaPensy}
           teamOne={'Бавовна'}
           teamTwo={'Пенси'}
+          teamOneSquad={BavovnaTeam}
+          teamTwoSquad={PensyTeam}
         />
         <ResultItem
           updateFunction={updateKabansPensy}
           teamOne={'Кабани'}
           teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaKabans}
-          teamOne={'Бавовна'}
-          teamTwo={'Кабани'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaPensy}
-          teamOne={'Бавовна'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateKabansPensy}
-          teamOne={'Кабани'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaKabans}
-          teamOne={'Бавовна'}
-          teamTwo={'Кабани'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaPensy}
-          teamOne={'Бавовна'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateKabansPensy}
-          teamOne={'Кабани'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaKabans}
-          teamOne={'Бавовна'}
-          teamTwo={'Кабани'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaPensy}
-          teamOne={'Бавовна'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateKabansPensy}
-          teamOne={'Кабани'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaKabans}
-          teamOne={'Бавовна'}
-          teamTwo={'Кабани'}
-        />
-        <ResultItem
-          updateFunction={updateBavovnaPensy}
-          teamOne={'Бавовна'}
-          teamTwo={'Пенси'}
-        />
-        <ResultItem
-          updateFunction={updateKabansPensy}
-          teamOne={'Кабани'}
-          teamTwo={'Пенси'}
+          teamOneSquad={KabansTeam}
+          teamTwoSquad={PensyTeam}
         />
       </ul>
     </Container>

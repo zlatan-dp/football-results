@@ -5,15 +5,16 @@ export const ResultWrap = styled.li`
   gap: 10px;
   padding: 10px 0;
   justify-content: center;
+  align-items: center;
 
-  :nth-child(even) {
+  :nth-child(2n + 1) {
     background-color: rgb(230, 230, 230);
   }
 `;
 
 export const ScoreWrap = styled.div``;
 
-export const GoalBtn = styled.button`
+export const Btn = styled.button`
   border: none;
   border-radius: 3px;
   padding: 3px;
@@ -29,3 +30,5 @@ export const SaveBtn = styled.button`
     background-color: rgb(113, 180, 235);
   }
 `;
+
+export const GoalsList = styled.ul``;
