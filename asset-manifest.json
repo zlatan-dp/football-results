@@ -1,13 +1,23 @@
 {
   "files": {
     "main.css": "/football-results/static/css/main.a0a305d6.css",
-    "main.js": "/football-results/static/js/main.095080aa.js",
+    "main.js": "/football-results/static/js/main.a8460dfa.js",
+    "static/js/304.ee34a881.chunk.js": "/football-results/static/js/304.ee34a881.chunk.js",
+    "static/js/84.2c1a2559.chunk.js": "/football-results/static/js/84.2c1a2559.chunk.js",
+    "static/js/525.881fb61f.chunk.js": "/football-results/static/js/525.881fb61f.chunk.js",
+    "static/js/1.38e93eed.chunk.js": "/football-results/static/js/1.38e93eed.chunk.js",
+    "static/js/887.a4e1db7e.chunk.js": "/football-results/static/js/887.a4e1db7e.chunk.js",
     "index.html": "/football-results/index.html",
     "main.a0a305d6.css.map": "/football-results/static/css/main.a0a305d6.css.map",
-    "main.095080aa.js.map": "/football-results/static/js/main.095080aa.js.map"
+    "main.a8460dfa.js.map": "/football-results/static/js/main.a8460dfa.js.map",
+    "304.ee34a881.chunk.js.map": "/football-results/static/js/304.ee34a881.chunk.js.map",
+    "84.2c1a2559.chunk.js.map": "/football-results/static/js/84.2c1a2559.chunk.js.map",
+    "525.881fb61f.chunk.js.map": "/football-results/static/js/525.881fb61f.chunk.js.map",
+    "1.38e93eed.chunk.js.map": "/football-results/static/js/1.38e93eed.chunk.js.map",
+    "887.a4e1db7e.chunk.js.map": "/football-results/static/js/887.a4e1db7e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0a305d6.css",
-    "static/js/main.095080aa.js"
+    "static/js/main.a8460dfa.js"
   ]
 }

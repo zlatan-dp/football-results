@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfootball_results=self.webpackChunkfootball_results||[]).push([[304],{304:function(n,e,t){t.r(e),t.d(e,{default:function(){return f}});var l,s,i=t(168),r=t(6444),o=r.ZP.div(l||(l=(0,i.Z)(["\n  min-height: 300px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]))),u=r.ZP.h1(s||(s=(0,i.Z)(["\n  font-weight: 500;\n  font-size: 48px;\n  text-align: center;\n"]))),c=t(184);function f(){return(0,c.jsx)(o,{children:(0,c.jsx)(u,{children:"Welcome to football results"})})}}}]);
+//# sourceMappingURL=304.ee34a881.chunk.js.map
