@@ -1,60 +1,23 @@
-import { useState } from 'react';
-import { bavovnaKabans } from 'helpers/BavovnaKabans';
-import { bavovnaPensy } from 'helpers/BavovnaPensy';
-import { kabansPensy } from 'helpers/KabansPensy';
-import { TotalTable } from './TotalTable/TotalTable';
-import { ResultList } from './ResultList/ResultList';
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import { Layout } from './Layout/Layout';
+
+const HomePage = lazy(() => import('pages/Home/Home'));
+const ResultsPage = lazy(() => import('pages/Results/Results'));
+const RegisterPage = lazy(() => import('pages/Register/Register'));
+const LoginPage = lazy(() => import('pages/Login/Login'));
 
 export const App = () => {
-  const [bavovnaStats, setBavovnaStats] = useState({
-    wins: 0,
-    draws: 0,
-    losses: 0,
-    goalsFor: 0,
-    goalsAgainst: 0,
-  });
-
-  const [kabansStats, setKabansStats] = useState({
-    wins: 0,
-    draws: 0,
-    losses: 0,
-    goalsFor: 0,
-    goalsAgainst: 0,
-  });
-
-  const [pensyStats, setPensyStats] = useState({
-    wins: 0,
-    draws: 0,
-    losses: 0,
-    goalsFor: 0,
-    goalsAgainst: 0,
-  });
-
-  const updateBavovnaKabans = (bavovnaGoals, kabansGoals) => {
-    bavovnaKabans(bavovnaGoals, kabansGoals, setBavovnaStats, setKabansStats);
-  };
-
-  const updateBavovnaPensy = (bavovnaGoals, pensyGoals) => {
-    bavovnaPensy(bavovnaGoals, pensyGoals, setBavovnaStats, setPensyStats);
-  };
-
-  const updateKabansPensy = (kabansGoals, pensyGoals) => {
-    kabansPensy(kabansGoals, pensyGoals, setKabansStats, setPensyStats);
-  };
-
+  console.log('privet');
   return (
-    <>
-      <TotalTable
-        bavovna={bavovnaStats}
-        kabans={kabansStats}
-        pensy={pensyStats}
-      />
-
-      <ResultList
-        updateBavovnaKabans={updateBavovnaKabans}
-        updateBavovnaPensy={updateBavovnaPensy}
-        updateKabansPensy={updateKabansPensy}
-      />
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/results" element={<ResultsPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Route>
+    </Routes>
   );
 };

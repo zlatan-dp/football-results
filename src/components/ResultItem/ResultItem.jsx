@@ -119,16 +119,3 @@ export const ResultItem = ({
     </>
   );
 };
-
-//    <Formik>
-//   <Form>
-//     {teamOneSquad.map(player => (
-//       <label>
-//         <Field type="radio" name="picked" value={player} />
-//         {player}
-//       </label>
-//     ))}
-//     <Btn type="submit">Записати</Btn>
-//   </Form>
-// </Formik>;
-//
