@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../Api';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'http://localhost:3001/api/';

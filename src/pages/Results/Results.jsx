@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { bavovnaKabans } from '../../helpers/BavovnaKabans';
 import { bavovnaPensy } from '../../helpers/BavovnaPensy';
 import { kabansPensy } from '../../helpers/KabansPensy';
 import { TotalTable } from '../../components/TotalTable/TotalTable';
 import { ResultList } from '../../components/ResultList/ResultList';
+import { getTeams } from 'Api';
 
 export default function Results() {
+  const [teams, setTeams] = useState([]);
+
   const [bavovnaStats, setBavovnaStats] = useState({
     wins: 0,
     draws: 0,
@@ -42,12 +45,17 @@ export default function Results() {
     kabansPensy(kabansGoals, pensyGoals, setKabansStats, setPensyStats);
   };
 
+  useEffect(() => {
+    getTeams().then(setTeams);
+  }, []);
+
   return (
     <>
       <TotalTable
         bavovna={bavovnaStats}
         kabans={kabansStats}
         pensy={pensyStats}
+        teams={teams}
       />
 
       <ResultList

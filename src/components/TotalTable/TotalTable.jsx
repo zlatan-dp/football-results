@@ -9,16 +9,7 @@ import {
   TD,
 } from './TotalTable.styled';
 
-export const TotalTable = ({ bavovna, kabans, pensy }) => {
-  const bavovnaGoalDif = bavovna.goalsFor - bavovna.goalsAgainst;
-  const bavovnaPoints = bavovna.wins * 3 + bavovna.draws;
-
-  const kabansGoalDif = kabans.goalsFor - kabans.goalsAgainst;
-  const kabansPoints = kabans.wins * 3 + kabans.draws;
-
-  const pensyGoalDif = pensy.goalsFor - pensy.goalsAgainst;
-  const pensyPoints = pensy.wins * 3 + pensy.draws;
-
+export const TotalTable = ({ bavovna, kabans, pensy, teams }) => {
   return (
     <Container>
       <TableWrap>
@@ -38,36 +29,18 @@ export const TotalTable = ({ bavovna, kabans, pensy }) => {
           </TableHead>
 
           <tbody>
-            <TR>
-              <TD>Бавовна</TD>
-              <TD>{bavovna.wins}</TD>
-              <TD>{bavovna.draws}</TD>
-              <TD>{bavovna.losses}</TD>
-              <TD>{bavovna.goalsFor}</TD>
-              <TD>{bavovna.goalsAgainst}</TD>
-              <TD>{bavovnaGoalDif}</TD>
-              <TD>{bavovnaPoints}</TD>
-            </TR>
-            <TR>
-              <TD>Кабани</TD>
-              <TD>{kabans.wins}</TD>
-              <TD>{kabans.draws}</TD>
-              <TD>{kabans.losses}</TD>
-              <TD>{kabans.goalsFor}</TD>
-              <TD>{kabans.goalsAgainst}</TD>
-              <TD>{kabansGoalDif}</TD>
-              <TD>{kabansPoints}</TD>
-            </TR>
-            <TR>
-              <TD>Пенси</TD>
-              <TD>{pensy.wins}</TD>
-              <TD>{pensy.draws}</TD>
-              <TD>{pensy.losses}</TD>
-              <TD>{pensy.goalsFor}</TD>
-              <TD>{pensy.goalsAgainst}</TD>
-              <TD>{pensyGoalDif}</TD>
-              <TD>{pensyPoints}</TD>
-            </TR>
+            {teams.map(team => (
+              <TR key={team._id}>
+                <TD>{team.name}</TD>
+                <TD>{team.results.wins}</TD>
+                <TD>{team.results.draws}</TD>
+                <TD>{team.results.losses}</TD>
+                <TD>{team.results.goalsFor}</TD>
+                <TD>{team.results.goalsAgainst}</TD>
+                <TD>{team.results.goalsFor - team.results.goalsAgainst}</TD>
+                <TD>{team.results.wins * 3 + team.results.draws}</TD>
+              </TR>
+            ))}
           </tbody>
         </Table>
       </TableWrap>
